@@ -10,13 +10,14 @@ from bs4 import BeautifulSoup
 URL  = "https://www.mebelshara.ru/contacts"
 
 
+logging.basicConfig(format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S",
+                        filename="parser1.log", level=logging.INFO, filemode="w")
+
+
 def main():
     """
     Main function that starting all actions
     """
-
-    logging.basicConfig(format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S",
-                        filename="parser1.log", level=logging.INFO, filemode="w")
 
     logging.info("Starting")
     data = get_data(get_html(URL))

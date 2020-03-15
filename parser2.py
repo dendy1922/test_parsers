@@ -11,13 +11,14 @@ URL = "https://www.tui.ru/api/office/cities/"
 BASIC_URL = "https://www.tui.ru/api/office/list/?cityId="
 
 
+logging.basicConfig(format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S", 
+                        filename="parser2.log", level=logging.INFO, filemode="w")
+
+
 def main():
     """
     Main function that starting all actions
     """
-
-    logging.basicConfig(format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S", 
-                        filename="parser2.log", level=logging.INFO, filemode="w")
 
     logging.info("Starting")
     data = json.loads(get_html(URL))
