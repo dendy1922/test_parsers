@@ -4,8 +4,6 @@ import time
 import lxml
 import requests
 
-from bs4 import BeautifulSoup
-
 
 URL = "https://www.tui.ru/api/office/cities/"
 BASIC_URL = "https://www.tui.ru/api/office/list/?cityId="
